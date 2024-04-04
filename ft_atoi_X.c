@@ -14,7 +14,7 @@ static int	ft_isspace(char c)
 
 int	ft_atoi(const char *nptr)
 {
-	long long res;
+	long res;
 	int	flag;
 	size_t	i;
 
@@ -42,7 +42,7 @@ int	ft_atoi(const char *nptr)
 
 int	main(void)
 {
-	char num[] = "   -123agv45";
+	char num[] = "-2147483648";
 
 	printf("num: %s\n", num);
 	printf("ft_atoi: %d\n", ft_atoi(num));
