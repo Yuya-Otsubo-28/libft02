@@ -17,14 +17,14 @@ int	ft_strncmp(const char *s1, const char *s2, size_t len)
 	return (0);
 }
 
-int	main(void)
-{
-	char s1[] = "Hello World!";
-	char s2[] = "Hello world!";
-	int	len = 7;
+// int	main(void)
+// {
+// 	char s1[] = "Hello World!";
+// 	char s2[] = "Hello world!";
+// 	int	len = 7;
 
-	printf("s1: %s\ns2: %s\n", s1, s2);
-	printf("ft_strncmp: %d\n", ft_strncmp(s1, s2, len));
-	printf("   strncmp: %d\n", strncmp(s1, s2, len));
-	return (0);
-}
+// 	printf("s1: %s\ns2: %s\n", s1, s2);
+// 	printf("ft_strncmp: %d\n", ft_strncmp(s1, s2, len));
+// 	printf("   strncmp: %d\n", strncmp(s1, s2, len));
+// 	return (0);
+// }

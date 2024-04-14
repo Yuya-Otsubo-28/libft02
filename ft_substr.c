@@ -33,16 +33,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (res);
 }
 
-int	main(void)
-{
-	char s[] = "";
-	unsigned int	start =  2;
-	size_t	len = 1;
-	char	*res;
+// int	main(void)
+// {
+// 	char s[] = "";
+// 	unsigned int	start =  2;
+// 	size_t	len = 1;
+// 	char	*res;
 
-	res = ft_substr(s, start, len);
-	printf("s: %s\nstart: %d\nlen: %ld\n\n", s, start, len);
-	printf("ft_substr: %s\n", res);
-	free(res);
-	return (0);
-}
+// 	res = ft_substr(s, start, len);
+// 	printf("s: %s\nstart: %d\nlen: %ld\n\n", s, start, len);
+// 	printf("ft_substr: %s\n", res);
+// 	free(res);
+// 	return (0);
+// }

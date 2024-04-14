@@ -26,15 +26,15 @@ void *ft_memmove(void *dst, const	void *src, size_t len)
 	return (dstp);
 }
 
-int main(void)
-{
-	char s1[] = "1234567890";
-	char s2[] = "1234567890";
-	char d1[] = "asdfghjkl";
-	char d2[] = "asdfghjkl";
-	size_t	len = 1;
+// int main(void)
+// {
+// 	char s1[] = "1234567890";
+// 	char s2[] = "1234567890";
+// 	char d1[] = "asdfghjkl";
+// 	char d2[] = "asdfghjkl";
+// 	size_t	len = 1;
 
-	printf("ft_memmove: %s\n", (unsigned char *)ft_memmove(s1, d1, len));
-	printf("   memmove: %s\n", (unsigned char *)memmove(s2, d2, len));
-	return (0);
-}
+// 	printf("ft_memmove: %s\n", (unsigned char *)ft_memmove(s1, d1, len));
+// 	printf("   memmove: %s\n", (unsigned char *)memmove(s2, d2, len));
+// 	return (0);
+// }

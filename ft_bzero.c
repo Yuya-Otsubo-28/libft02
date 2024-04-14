@@ -12,19 +12,19 @@ void	ft_bzero(void *b, size_t len)
 		str[i++] = 0;
 }
 
-int	main(void)
-{
-	char s1[] = "1234567890";
-	char s2[] = "1234567890";
-	int n = 5;
+// int	main(void)
+// {
+// 	char s1[] = "1234567890";
+// 	char s2[] = "1234567890";
+// 	int n = 5;
 
-	ft_bzero(s1, n);
-	bzero(s2, n);
-	printf("---- ft_bzero ----\n");
-	for (int i = 0; i < 10; i++)
-		printf("%d: %d\n", i, s1[i]);
-	printf("----    bzero ----\n");
-	for (int i = 0; i < 10; i++)
-		printf("%d: %d\n", i, s2[i]);
-	return (0);
-}
+// 	ft_bzero(s1, n);
+// 	bzero(s2, n);
+// 	printf("---- ft_bzero ----\n");
+// 	for (int i = 0; i < 10; i++)
+// 		printf("%d: %d\n", i, s1[i]);
+// 	printf("----    bzero ----\n");
+// 	for (int i = 0; i < 10; i++)
+// 		printf("%d: %d\n", i, s2[i]);
+// 	return (0);
+// }

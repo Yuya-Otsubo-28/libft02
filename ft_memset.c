@@ -13,14 +13,14 @@ void *ft_memset(void *s, int c, size_t n)
 	return (s);
 }
 
-int	main(void)
-{
-	char s1[] = "";
-	char s2[] = "";
-	char c = 'a';
-	int n = 5;
+// int	main(void)
+// {
+// 	char s1[] = "";
+// 	char s2[] = "";
+// 	char c = 'a';
+// 	int n = 5;
 
-	printf("ft_memset: %s\n", (unsigned char *)ft_memset(s1, c, n));
-	printf("   memset: %s\n", (unsigned char *)memset(s2, c, n));
-	return (0);
-}
+// 	printf("ft_memset: %s\n", (unsigned char *)ft_memset(s1, c, n));
+// 	printf("   memset: %s\n", (unsigned char *)memset(s2, c, n));
+// 	return (0);
+// }

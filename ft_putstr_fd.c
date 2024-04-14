@@ -12,10 +12,10 @@ void	ft_putstr_fd(char *s, int fd)
 		write(fd, &s[i++], sizeof(char));
 }
 
-int	main(void)
-{
-	char s[] = "Hello World!\n";
+// int	main(void)
+// {
+// 	char s[] = "Hello World!\n";
 	
-	ft_putstr_fd(s, 1);
-	return (0);
-}
+// 	ft_putstr_fd(s, 1);
+// 	return (0);
+// }

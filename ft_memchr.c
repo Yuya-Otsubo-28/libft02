@@ -17,13 +17,13 @@ void	*ft_memchr(const void *b, int c, size_t len)
 	return (NULL);
 }
 
-int	main(void)
-{
-	char s[] = "12345678901234567890";
-	char c = 'b';
-	int	len = 100;
+// int	main(void)
+// {
+// 	char s[] = "12345678901234567890";
+// 	char c = 'b';
+// 	int	len = 100;
 
-	printf("  s: %s\n  c: %c\nlen: %d\n", s, c, len);
-	printf("ft_memchr: %s\n", (char *)ft_memchr(s, c, len));
-	printf("   memchr: %s\n", (char *)memchr(s, c, len));
-}
+// 	printf("  s: %s\n  c: %c\nlen: %d\n", s, c, len);
+// 	printf("ft_memchr: %s\n", (char *)ft_memchr(s, c, len));
+// 	printf("   memchr: %s\n", (char *)memchr(s, c, len));
+// }

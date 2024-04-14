@@ -8,11 +8,11 @@ int	ft_toupper(int c)
 	return (c);
 }
 
-int	main(void)
-{
-	char c = 'a';
+// int	main(void)
+// {
+// 	char c = 'a';
 
-	printf("ft_toupper: %c\n", ft_toupper(c));
-	printf("   toupper: %c\n", toupper(c));
-	return (0);
-}
+// 	printf("ft_toupper: %c\n", ft_toupper(c));
+// 	printf("   toupper: %c\n", toupper(c));
+// 	return (0);
+// }

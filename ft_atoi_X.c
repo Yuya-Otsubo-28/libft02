@@ -40,12 +40,12 @@ int	ft_atoi(const char *nptr)
 	return ((int)(res * flag));
 }
 
-int	main(void)
-{
-	char num[] = "-2147483648";
+// int	main(void)
+// {
+// 	char num[] = "-2147483648";
 
-	printf("num: %s\n", num);
-	printf("ft_atoi: %d\n", ft_atoi(num));
-	printf("   atoi: %d\n", atoi(num));
-	return (0);
-}
+// 	printf("num: %s\n", num);
+// 	printf("ft_atoi: %d\n", ft_atoi(num));
+// 	printf("   atoi: %d\n", atoi(num));
+// 	return (0);
+// }

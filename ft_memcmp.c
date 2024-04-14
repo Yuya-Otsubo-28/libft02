@@ -21,14 +21,14 @@ int	ft_memcmp(const void *b1, const void *b2, size_t len)
 	return (0);
 }
 
-int	main(void)
-{
-	char s1[] = "Hello World!";
-	char s2[] = "Hello World!";
-	int	len = 9;
+// int	main(void)
+// {
+// 	char s1[] = "Hello World!";
+// 	char s2[] = "Hello World!";
+// 	int	len = 9;
 
-	printf("s1: %s\ns2: %s\n", s1, s2);
-	printf("ft_memcmp: %d\n", ft_memcmp(s1, s2, len));
-	printf("   memcmp: %d\n", memcmp(s1, s2, len));
-	return (0);
-}
+// 	printf("s1: %s\ns2: %s\n", s1, s2);
+// 	printf("ft_memcmp: %d\n", ft_memcmp(s1, s2, len));
+// 	printf("   memcmp: %d\n", memcmp(s1, s2, len));
+// 	return (0);
+// }

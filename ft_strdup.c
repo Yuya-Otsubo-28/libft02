@@ -25,16 +25,16 @@ char	*ft_strdup(const char *str)
 }
 
 //こいつはNULL渡すとsegv
-int	main(void)
-{
-	char *str = NULL;
-	char *res1;
-	char *res2;
+// int	main(void)
+// {
+// 	char *str = NULL;
+// 	char *res1;
+// 	char *res2;
 
-	res1 = ft_strdup(str);
-	res2 = strdup(str);
-	printf("      str: %s\n  address: %p\n\n", str, str);
-	printf("ft_strdup: %s\n  address: %p\n\n", res1, res1);
-	printf("   strdup: %s\n  address: %p\n", res2, res2);
-	return (0);
-}
+// 	res1 = ft_strdup(str);
+// 	res2 = strdup(str);
+// 	printf("      str: %s\n  address: %p\n\n", str, str);
+// 	printf("ft_strdup: %s\n  address: %p\n\n", res1, res1);
+// 	printf("   strdup: %s\n  address: %p\n", res2, res2);
+// 	return (0);
+// }

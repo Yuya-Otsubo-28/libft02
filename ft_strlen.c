@@ -10,10 +10,10 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-int	main(void)
-{
-	char *s = "Hello, World!";
-	printf("ft_strlen: %zu\n", strlen(s));
-	printf("strlen: %zu\n", strlen(s));
-	return (0);
-}
+// int	main(void)
+// {
+// 	char *s = "Hello, World!";
+// 	printf("ft_strlen: %zu\n", strlen(s));
+// 	printf("strlen: %zu\n", strlen(s));
+// 	return (0);
+// }

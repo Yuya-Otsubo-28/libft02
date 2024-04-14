@@ -36,12 +36,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (res);
 }
 
-int	main(void)
-{
-	char s1[] = "";
-	char s2[] = "";
+// int	main(void)
+// {
+// 	char s1[] = "";
+// 	char s2[] = "";
 
-	printf("s1: %s\ns2: %s\n\n", s1, s2);
-	printf("ft_strjoin: %s\n", ft_strjoin(s1, s2));
-	return (0);
-}
+// 	printf("s1: %s\ns2: %s\n\n", s1, s2);
+// 	printf("ft_strjoin: %s\n", ft_strjoin(s1, s2));
+// 	return (0);
+// }

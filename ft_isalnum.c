@@ -6,10 +6,10 @@ int	ft_isalnum(int c)
 		|| (c >= '0' && c <= '9'));
 }
 
-int	main(void)
-{
-	char c = 'a';
-	printf("ft_isalnum: %d\n", ft_isalnum(c));
-	printf("isalnum: %d\n", isalnum(c));
-	return (0);
-}
+// int	main(void)
+// {
+// 	char c = 'a';
+// 	printf("ft_isalnum: %d\n", ft_isalnum(c));
+// 	printf("isalnum: %d\n", isalnum(c));
+// 	return (0);
+// }
