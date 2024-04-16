@@ -38,7 +38,13 @@ SRCS = ft_atoi.c \
 		ft_strrchr.c \
 		ft_substr.c \
 		ft_tolower.c \
-		ft_toupper.c
+		ft_toupper.c \
+		ft_strtrim.c \
+		ft_split.c \
+		ft_itoa.c \
+		ft_strmapi.c \
+		ft_striteri.c \
+		ft_putnbr_fd.c
 OBJS = $(SRCS:.c=.o)
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -50,6 +56,9 @@ $(NAME): $(OBJS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
+
+%.c:
+	touch $@
 
 clean:
 	rm -f $(OBJS)
