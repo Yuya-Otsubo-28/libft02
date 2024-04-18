@@ -1,12 +1,21 @@
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yuotsubo <yuotsubo@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/15 23:53:23 by yuotsubo          #+#    #+#             */
+/*   Updated: 2024/04/15 23:53:23 by yuotsubo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t len)
 {
 	size_t	i;
 
-	if (!s1 || !s2)
-		return (0);
 	i = 0;
 	while (i < len && (s1[i] || s2[i]))
 	{

@@ -1,14 +1,27 @@
-#include <string.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yuotsubo <yuotsubo@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/15 23:52:43 by yuotsubo          #+#    #+#             */
+/*   Updated: 2024/04/15 23:52:43 by yuotsubo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void *ft_memmove(void *dst, const	void *src, size_t len)
+#include "libft.h"
+
+void	*ft_memmove(void *dst, const	void *src, size_t len)
 {
-	unsigned char *dstp;
-	unsigned char *srcp;
-	size_t	i;
+	unsigned char	*dstp;
+	unsigned char	*srcp;
+	size_t			i;
 
 	dstp = (unsigned char *)dst;
 	srcp = (unsigned char *)src;
+	if (!dstp && !srcp)
+		return (NULL);
 	if (dstp > srcp)
 	{
 		while (len--)

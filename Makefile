@@ -1,12 +1,12 @@
-#**************************************************************************** #
+# **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: yotsubo <y.otsubo.886@ms.saitama-u.ac.j    +#+  +:+       +#+         #
+#    By: yuotsubo <yuotsubo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/04/14 21:05:34 by yotsubo           #+#    #+#              #
-#    Updated: 2024/04/14 21:05:34 by yotsubo          ###   ########.fr        #
+#    Created: 2024/04/15 23:54:10 by yuotsubo          #+#    #+#              #
+#    Updated: 2024/04/15 23:54:10 by yuotsubo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,42 +39,34 @@ SRCS = ft_atoi.c \
 		ft_substr.c \
 		ft_tolower.c \
 		ft_toupper.c \
-		ft_strtrim.c \
 		ft_split.c \
-		ft_itoa.c \
-		ft_strmapi.c \
 		ft_striteri.c \
+		ft_strmapi.c \
+		ft_itoa.c \
+		ft_strtrim.c \
 		ft_putnbr_fd.c
 OBJS = $(SRCS:.c=.o)
+INCLUDES = -I./
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-BONUS_SRCS = ft_lstnew.c \
-		ft_lstadd_front.c \
-		ft_lstsize.c \
-		ft_lstlast.c \
-		ft_lstadd_back.c \
-		ft_lstdelone.c \
-		ft_lstclear.c \
-		ft_lstiter.c \
-		ft_lstmap.c
-BONUS_OBJS = $(BONUS_SRCS:.c=.o)
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
-
-bonus: $(NAME) $(BONUS_OBJS)
-	ar rcs $(NAME) $(BONUS_OBJS)
+	$(AR) rcs $(NAME) $(OBJS)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 clean:
-	rm -f $(OBJS) $(BONUS_OBJS)
+	$(RM) $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re norm 
+
+norm: $(SRCS)
+	norminette $>

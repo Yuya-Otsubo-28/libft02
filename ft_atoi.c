@@ -1,8 +1,16 @@
-#include <stdlib.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yuotsubo <yuotsubo@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/15 23:52:04 by yuotsubo          #+#    #+#             */
+/*   Updated: 2024/04/15 23:52:04 by yuotsubo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-// FreeBSD: It is equivalent to (int)strtol(nptr, NULL, 10);
-// strtolがlong型だから結局long->intのキャストを挟む形の実装でOKそう
+#include "libft.h"
 
 static int	ft_isspace(char c)
 {
@@ -14,35 +22,35 @@ static int	ft_isspace(char c)
 
 int	ft_atoi(const char *nptr)
 {
-	long res;
-	int	flag;
-	size_t	i;
+	long long	res;
+	int			flag;
+	size_t		i;
 
-	if (!nptr)
-		return (0);
 	i = 0;
 	while (ft_isspace(nptr[i]))
 		i++;
 	flag = 1;
 	if (nptr[i] == '+' || nptr[i] == '-')
 	{
-		if (nptr[i] == '-')
+		if (nptr[i++] == '-')
 			flag *= -1;
-		i++;
 	}
 	res = 0;
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
+		if (res * flag > LONG_MAX / 10 || (res * flag == LONG_MAX / 10 && nptr[i] - '0' > LONG_MAX % 10))
+			return ((int)LONG_MAX);
+		if (res * flag < LONG_MIN / 10 || (res * flag == LONG_MIN / 10 && -(nptr[i] - '0') < LONG_MIN % 10))
+			return ((int)LONG_MIN);
 		res *= 10;
-		res += nptr[i] - '0';
-		i++;
+		res += nptr[i++] - '0';
 	}
 	return ((int)(res * flag));
 }
 
 // int	main(void)
 // {
-// 	char num[] = "-2147483648";
+// 	char num[] = "-9223372036854775809";
 
 // 	printf("num: %s\n", num);
 // 	printf("ft_atoi: %d\n", ft_atoi(num));

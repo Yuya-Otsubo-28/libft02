@@ -1,43 +1,22 @@
-#include <stdio.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yuotsubo <yuotsubo@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/17 18:41:15 by yuotsubo          #+#    #+#             */
+/*   Updated: 2024/04/17 18:41:15 by yuotsubo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 // static char test_func(unsigned int i, char c)
 // {
 // 	(void)i;
 // 	return (c + 1);
 // }
-
-static char	*ft_strdup(const char *str)
-{
-	size_t	i;
-	size_t	len;
-	char	*res;
-
-	len = 0;
-	while (str[len])
-		len++;
-	res = (char *)malloc(sizeof(char) * (len + 1));
-	if (!res)
-		return (NULL);
-	i = 0;
-	while (str[i])
-	{
-		res[i] = str[i];
-		i++;
-	}
-	res[i] = '\0';
-	return (res);
-}
-
-static size_t	ft_strlen(const char *s)
-{
-	size_t i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
 
 char	*ft_strmapi(char const *s, char (* f)(unsigned int, char))
 {

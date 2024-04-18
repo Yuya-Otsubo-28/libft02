@@ -1,51 +1,16 @@
-#include <stdio.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yuotsubo <yuotsubo@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/15 23:53:31 by yuotsubo          #+#    #+#             */
+/*   Updated: 2024/04/15 23:53:31 by yuotsubo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-size_t	ft_strlen(const char *s)
-{
-	size_t i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-
-static char	*ft_strdup(const char *str)
-{
-	size_t	i;
-	size_t	len;
-	char	*res;
-
-	len = 0;
-	while (str[len])
-		len++;
-	res = (char *)malloc(sizeof(char) * (len + 1));
-	if (!res)
-		return (NULL);
-	i = 0;
-	while (str[i])
-	{
-		res[i] = str[i];
-		i++;
-	}
-	res[i] = '\0';
-	return (res);
-}
-
-static char *ft_strchr(const char *s, int c)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == (char)c)
-			return ((char *)&s[i]);
-		i++;
-	}
-	return (NULL);
-}
+#include "libft.h"
 
 static size_t	get_trimmed_len(char const *s1, char const *set)
 {

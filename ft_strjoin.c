@@ -1,15 +1,16 @@
-#include <stdio.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yuotsubo <yuotsubo@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/15 23:53:15 by yuotsubo          #+#    #+#             */
+/*   Updated: 2024/04/15 23:53:15 by yuotsubo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-static size_t	ft_strlen(const char *s)
-{
-	size_t i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

@@ -1,12 +1,23 @@
-#include <string.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yuotsubo <yuotsubo@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/15 23:53:26 by yuotsubo          #+#    #+#             */
+/*   Updated: 2024/04/15 23:53:26 by yuotsubo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
 
-	if (!big || !little)
+	if (!big && !len)
 		return (NULL);
 	if (!little[0])
 		return ((char *)big);
@@ -29,10 +40,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 // {
 // 	char big[] = "1234567890Hello World!67890";
 // 	char little[] = "Hello World!";
-// 	int	len = 30;
+// 	int	len = 0;
 
 // 	printf("   big: %s\nlittle: %s\n", big, little);
-// 	printf("ft_strnstr: %s\n", ft_strnstr(big, little, len));
-// 	// printf("   strnstr: %s\n", strnstr(big, little, len));
+// 	// printf("ft_strnstr: %s\n", ft_strnstr(big, little, len));
+// 	printf("   strnstr: %s\n", strnstr(big, little, len));
 // 	return (0);
 // }

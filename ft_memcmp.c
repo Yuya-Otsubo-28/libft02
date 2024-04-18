@@ -1,14 +1,23 @@
-#include <string.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yuotsubo <yuotsubo@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/15 23:52:37 by yuotsubo          #+#    #+#             */
+/*   Updated: 2024/04/15 23:52:37 by yuotsubo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_memcmp(const void *b1, const void *b2, size_t len)
 {
-	unsigned char *b1p;
-	unsigned char *b2p;
-	size_t	i;
+	unsigned char	*b1p;
+	unsigned char	*b2p;
+	size_t			i;
 
-	if (!b1 || !b2)
-		return (0);
 	b1p = (unsigned char *)b1;
 	b2p = (unsigned char *)b2;
 	i = 0;

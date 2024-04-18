@@ -1,6 +1,16 @@
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yuotsubo <yuotsubo@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/15 23:53:12 by yuotsubo          #+#    #+#             */
+/*   Updated: 2024/04/15 23:53:12 by yuotsubo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strdup(const char *str)
 {
@@ -24,7 +34,6 @@ char	*ft_strdup(const char *str)
 	return (res);
 }
 
-//こいつはNULL渡すとsegv
 // int	main(void)
 // {
 // 	char *str = NULL;

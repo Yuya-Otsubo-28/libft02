@@ -1,16 +1,27 @@
-#include <string.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yuotsubo <yuotsubo@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/15 23:52:35 by yuotsubo          #+#    #+#             */
+/*   Updated: 2024/04/15 23:52:35 by yuotsubo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memchr(const void *b, int c, size_t len)
 {
 	unsigned char	*bp;
-	size_t	i;
+	size_t			i;
 
 	bp = (unsigned char *)b;
 	i = 0;
 	while (i < len)
 	{
-		if (bp[i] == c)
+		if (bp[i] == (unsigned char)c)
 			return (&bp[i]);
 		i++;
 	}
