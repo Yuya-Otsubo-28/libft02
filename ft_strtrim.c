@@ -18,10 +18,13 @@ static size_t	get_trimmed_len(char const *s1, char const *set)
 	size_t	tail;
 
 	head = 0;
-	while (ft_strchr(set, s1[head]))
+	while (s1[head] && ft_strchr(set, s1[head]))
 		head++;
-	tail = ft_strlen(s1) - 1;
-	while (ft_strchr(set, s1[tail]))
+	if (ft_strlen(s1))
+		tail = ft_strlen(s1) - 1;
+	else
+		tail = 0;
+	while (tail > 0 && ft_strchr(set, s1[tail]))
 		tail--;
 	tail++;
 	if (tail < head)
@@ -29,7 +32,7 @@ static size_t	get_trimmed_len(char const *s1, char const *set)
 	return (tail - head);
 }
 
-static char *make_res(char const *s1, char const *set, char *res, size_t len)
+static char	*make_res(char const *s1, char const *set, char *res, size_t len)
 {
 	size_t	i;
 	size_t	j;
@@ -65,7 +68,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 // int	main(void)
 // {
-// 	char s1[] = "3456789012345";
+// 	char s1[] = "122212121212121";
 // 	char set[] = "12";
 // 	char *res;
 

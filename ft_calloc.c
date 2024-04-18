@@ -14,9 +14,16 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	unsigned char *res;
-	size_t	i;
+	unsigned char	*res;
+	size_t			i;
 
+	if (size > 0 && nmemb > (size_t)(-1) / size)
+		return (NULL);
+	if (!nmemb || !size)
+	{
+		nmemb = 1;
+		size = 1;
+	}
 	res = (unsigned char *)malloc(nmemb * size);
 	if (!res)
 		return (NULL);
@@ -31,11 +38,11 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 // int	main(void)
 // {
-// 	size_t	nmemb = sizeof(int);
+// 	// size_t	nmemb = sizeof(int);
 // 	size_t	size = 4;
 // 	int	*res;
 
-// 	res = (int *)ft_calloc(nmemb, size);
+// 	res = (int *)ft_calloc(INT_MIN, size);
 // 	for (size_t i = 0; i < size; i++)
 // 		printf("res[%ld]: %d\n", i, res[i]);
 // 	free(res);

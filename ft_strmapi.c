@@ -18,7 +18,7 @@
 // 	return (c + 1);
 // }
 
-char	*ft_strmapi(char const *s, char (* f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*res;
 	size_t	len;

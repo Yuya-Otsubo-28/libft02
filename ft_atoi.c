@@ -31,16 +31,16 @@ int	ft_atoi(const char *nptr)
 		i++;
 	flag = 1;
 	if (nptr[i] == '+' || nptr[i] == '-')
-	{
 		if (nptr[i++] == '-')
 			flag *= -1;
-	}
 	res = 0;
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
-		if (res * flag > LONG_MAX / 10 || (res * flag == LONG_MAX / 10 && nptr[i] - '0' > LONG_MAX % 10))
+		if (res * flag > LONG_MAX / 10 \
+		|| (res * flag == LONG_MAX / 10 && nptr[i] - '0' > LONG_MAX % 10))
 			return ((int)LONG_MAX);
-		if (res * flag < LONG_MIN / 10 || (res * flag == LONG_MIN / 10 && -(nptr[i] - '0') < LONG_MIN % 10))
+		if (res * flag < LONG_MIN / 10 \
+		|| (res * flag == LONG_MIN / 10 && -(nptr[i] - '0') < LONG_MIN % 10))
 			return ((int)LONG_MIN);
 		res *= 10;
 		res += nptr[i++] - '0';

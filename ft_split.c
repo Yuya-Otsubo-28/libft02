@@ -26,7 +26,7 @@ static int	count_strs(const char *s, char c)
 {
 	size_t	i;
 	int		flag;
-	int	res;
+	int		res;
 
 	i = 0;
 	flag = 1;
@@ -46,9 +46,9 @@ static int	count_strs(const char *s, char c)
 	return (res);
 }
 
-static char *ft_strcdup(const char *s, char c)
+static char	*ft_strcdup(const char *s, char c)
 {
-	char 	*res;
+	char	*res;
 	size_t	len;
 	size_t	i;
 

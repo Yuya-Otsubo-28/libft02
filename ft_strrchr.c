@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	size_t	i;
-	char *res;
+	char	*res;
 
 	res = NULL;
 	i = 0;

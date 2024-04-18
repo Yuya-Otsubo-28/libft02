@@ -18,8 +18,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	s_len;
 	char	*res;
 
-	if (!s || !len)
+	if (!s)
 		return (NULL);
+	if (!len)
+		return (ft_strdup(""));
 	s_len = ft_strlen(s);
 	if (start >= s_len)
 		len = 0;
@@ -40,9 +42,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 // int	main(void)
 // {
-// 	char s[] = "";
-// 	unsigned int	start =  2;
-// 	size_t	len = 1;
+// 	char s[] = "42";
+// 	unsigned int	start =  0;
+// 	size_t	len = 0;
 // 	char	*res;
 
 // 	res = ft_substr(s, start, len);
